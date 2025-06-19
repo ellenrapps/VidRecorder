@@ -1,0 +1,191 @@
+<Page
+    x:Class="vid2_25022021846pm.FaqPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:vid2_25022021846pm"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <ScrollViewer HorizontalScrollMode="Enabled" HorizontalScrollBarVisibility="Visible">
+        <Grid Background="White" BorderBrush="DarkSeaGreen"  BorderThickness="5" >
+
+            <SplitView Name="MySplitView" 
+                   IsPaneOpen="False" 
+                   DisplayMode="CompactOverlay" 
+                   CompactPaneLength="65" 
+                   OpenPaneLength="120" 
+                   Visibility="Visible">
+
+                <SplitView.Pane>
+                    <StackPanel Name="MyStackPanelMain" Background="DarkSeaGreen" Margin="0,0,0,0">
+                        <StackPanel Name="MyStackPanelHamburger" Orientation="Horizontal" Margin="0,25,0,0">
+                            <Button Name="HamburgerButton2" 
+                                FontFamily="Segoe MDL2 Assets" 
+                                Content="&#xE700;"                                
+                                Background="{x:Null}" 
+                                FontSize="30"
+                                Click="ButtonClick2" />
+                        </StackPanel>
+
+                        <StackPanel Name="MyStackPanelHome" Orientation="Horizontal" Margin="0,5,0,0" ToolTipService.ToolTip="Home">
+                            <Button Name="HomeButton"
+                                         FontFamily="Segoe MDL2 Assets" 
+                                         FontSize="35" Content="&#xE80F;"
+                                         Click="ButtonClick2"
+                                         Background="{x:Null}" />
+                            <TextBlock Text="Home" FontSize="16" VerticalAlignment="Center" Margin="10,0,0,0" TextWrapping="WrapWholeWords"/>
+
+                        </StackPanel>
+
+                    </StackPanel>
+                </SplitView.Pane>
+
+                <SplitView.Content>
+
+                    <TextBlock x:Name="pageTitle" FontSize="17" Margin="15,0,0,0">
+            <LineBreak/>
+                <LineBreak/>
+                <Bold>Frequently Asked Questions (FAQ)</Bold>
+                <LineBreak/> 
+                <LineBreak/>
+            
+                <Bold>Warning #1:</Bold> Be sure to complete the video recording process <LineBreak/>            
+                before visiting the Frequently Asked Questions (FAQ) as visiting <LineBreak/>            
+                this page has the same effect as the “Refresh” button – the main frame will return to <LineBreak/>
+                blank white space.
+                        
+                <LineBreak/> 
+                <LineBreak/>
+            
+                <Bold>Warning #2:</Bold> Don't minimize the app as all recording functions, <LineBreak/>            
+                including Camera Ready, Record, Pause, Resume, Stop and Save will be disabled. <LineBreak/>            
+                You can, however, resize this app.            
+                <LineBreak/> 
+                <LineBreak/>
+                
+                <Bold>What is VidRecorder app? </Bold> <LineBreak/>
+                VidRecorder app records video with audio, allows record pause and record resume, <LineBreak/> 
+                and saves video recording to HD1080p MP4 file.                
+                <LineBreak/> 
+                <LineBreak/>
+                
+                <Bold>What’s the recommended hardware requirement to record a video?</Bold> <LineBreak/>
+                To record a video, 4GB RAM is recommended.
+                <LineBreak/> 
+                <LineBreak/>
+            
+                <Bold>How to record a video?</Bold> <LineBreak/>
+                Here are the steps to record a video: <LineBreak/>            
+                1. Click the "Camera Ready" button. <LineBreak/>            
+                2. Click the "Record" button. <LineBreak/>            
+                3. After clicking the Record button, you can pause the recording <LineBreak/>
+                by clicking the "Pause" button. <LineBreak/>
+                4. If you want to resume the recording, click the "Resume" button. <LineBreak/>
+                5. If you want to stop and save the recording, click the "Stop and Save" button. <LineBreak/>
+                The Stop and Save button completes the video recording process.
+                <LineBreak/>
+                <LineBreak/>
+                
+                <Bold>How to find out the status of the video recording process?</Bold> <LineBreak/>
+                A text message below the "Record New Video or Refresh" button shows the status of <LineBreak/> 
+                the video recording process.
+                <LineBreak/>
+                <LineBreak/>
+                        
+                <Bold>How to find out the recording duration?</Bold><LineBreak/>
+                The recording duration can be found below the recording status.
+                <LineBreak/>
+                <LineBreak/>
+                
+                <Bold>Where's my video recording?</Bold> <LineBreak/>
+                Your video is saved inside the "Videos" folder. You can find the <LineBreak/>
+                Videos folder under "File Explorer" and then go to "This PC" and find the "Videos" folder.
+                <LineBreak/>
+                <LineBreak/>
+            
+                <Bold>How to record again?</Bold><LineBreak/>
+                Click the "Record New Video or Refresh" button.
+                <LineBreak/>
+                <LineBreak/>
+            
+                <Bold>What are the effects of clicking the "Record New Video or Refresh" button?</Bold> <LineBreak/>
+                Clicking the "Record New Video or Refresh" button allows you to record another video. <LineBreak/>
+                It also restarts the app. This will also result in disabling all existing recording <LineBreak/>
+                functions. So be sure to complete the video recording process before <LineBreak/> 
+                clicking this button. 
+                <LineBreak/>
+                <LineBreak/>
+            
+                <Bold>What is the maximum recording time?</Bold> <LineBreak/>
+                Three hours is the maximum recording time.
+                <LineBreak/>
+                <LineBreak/>
+            
+                <Bold>What is the default video recording quality?</Bold> <LineBreak/>
+                The default video recording quality is HD1080p (1920 X 1080). <LineBreak/>
+                Video quality, in general, depends on other factors such as <LineBreak/>
+                camera specifications, lighting, etc.
+                <LineBreak/>
+                <LineBreak/> 
+                
+                <Bold>What is the default video recording format?</Bold> <LineBreak/>
+                The default video recording format is MP4.
+                <LineBreak/>
+                <LineBreak/>
+                                
+                <Bold>Can I resize this video app?</Bold> <LineBreak/>
+                Yes, you can. Click on the resize icon located on top of the app<LineBreak/> 
+                screen (right side when you're facing the computer).
+                <LineBreak/>
+                <LineBreak/>
+                
+                <Bold>What are the known issues?</Bold> <LineBreak/>
+                The following are the known issues:
+                <LineBreak/>
+                <LineBreak/>
+                
+                During the "Camera Ready" state, one of the causes of failure to <LineBreak/> 
+                preview is that the computer's camera and microphone are <LineBreak/>
+                disabled. Please enable the computer's camera and <LineBreak/>
+                microphone when using this app.
+                <LineBreak/>
+                <LineBreak/>
+                
+                During the "Record", "Pause", "Resume", "Stop and Save" stages, <LineBreak/>
+                one of the causes of errors is that this app is minimized. Please don't minimize <LineBreak/>
+                this app during any of these stages.
+                <LineBreak/>
+                <LineBreak/>
+                
+                <Bold>What's the general advice when something goes wrong?</Bold> <LineBreak/>                
+                Clicking the "Record New Video or Refresh" button solves known issues.
+                <LineBreak/>
+                <LineBreak/>
+                
+                <Bold>Does this app access, collect, or transmit personal information <LineBreak/> 
+                (data that could be used to identify a person)?</Bold> <LineBreak/>
+                This app respects your privacy. It doesn’t access, collect, or <LineBreak/> 
+                transmit personal information (data that could be used to identify a person).
+                <LineBreak/>
+                <LineBreak/>
+            
+                <Bold>How can I contact the developer if I have questions not answered here?</Bold> <LineBreak/>
+                Email me at support@ellenrapps.com
+                <LineBreak/>
+                <LineBreak/>
+
+                    </TextBlock>
+
+                </SplitView.Content>
+
+
+            </SplitView>
+
+
+        </Grid>
+    </ScrollViewer>
+
+</Page>
+

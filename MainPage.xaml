@@ -1,0 +1,149 @@
+<Page
+    x:Class="vid2_25022021846pm.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:vid2_25022021846pm"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="White" BorderBrush="DarkSeaGreen" BorderThickness="25">
+
+        <SplitView Name="MySplitView" 
+                   IsPaneOpen="False" 
+                   DisplayMode="CompactOverlay" 
+                   CompactPaneLength="85" 
+                   OpenPaneLength="360" 
+                   Visibility="Visible">
+
+            <SplitView.Pane>
+                <StackPanel Name="MyStackPanelMain" Background="DarkSeaGreen" Margin="0,0,0,0">
+                    <StackPanel Name="MyStackPanelHamburger" Orientation="Horizontal" Margin="0,7,0,0">
+                        <Button Name="HamburgerButton" 
+                                FontFamily="Segoe MDL2 Assets" 
+                                Content="&#xE700;"                                
+                                Background="{x:Null}" 
+                                FontSize="30"
+                                Click="ButtonClick" />
+                    </StackPanel>
+
+                    <StackPanel Name="MyStackPanelFaq" Orientation="Horizontal" Margin="0,0,0,0" ToolTipService.ToolTip="FAQ">
+                        <Button Name="FaqButton"
+                                         FontFamily="Segoe MDL2 Assets" 
+                                         FontSize="35" Content="&#xE82F;"
+                                         Click="ButtonClick"
+                                         Background="{x:Null}" />
+                        <TextBlock Text="Frequently Asked Questions (FAQ)" FontSize="16" VerticalAlignment="Center" Margin="40,0,0,0" TextWrapping="WrapWholeWords"/>
+
+                    </StackPanel>
+
+                    <StackPanel Name="MyStackPanelPreview" Orientation="Horizontal" Margin="0,5,0,0" ToolTipService.ToolTip="Camera Ready">
+                        <Button Name="PreviewButton" 
+                                         FontFamily="Segoe MDL2 Assets" 
+                                         FontSize="35" Content="&#xEA0C;" 
+                                         Background="{x:Null}"
+                                         Click="ButtonClick"
+                                         ClickMode="Press" />
+
+                        <TextBlock Text="Camera Ready" FontSize="16" VerticalAlignment="Center" Margin="40,0,0,0" />
+                    </StackPanel>
+
+                    <StackPanel Name="MyStackPanelStartRecord" Orientation="Horizontal" Margin="0,5,0,0" ToolTipService.ToolTip="Record">
+                        <Button Name="RecordButton" 
+                                         FontFamily="Segoe MDL2 Assets" 
+                                         FontSize="35" Content="&#xE81D;" 
+                                         Background="{x:Null}"
+                                         Click="ButtonClick"
+                                         ClickMode="Press" />
+
+                        <TextBlock Text="Record" FontSize="16" VerticalAlignment="Center" Margin="40,0,0,0" />
+                    </StackPanel>
+
+                    <StackPanel Name="MyStackPanelPauseRecord" Orientation="Horizontal" Margin="0,5,0,0" ToolTipService.ToolTip="Pause">
+                        <Button Name="PauseButton" 
+                                         FontFamily="Segoe MDL2 Assets" 
+                                         FontSize="35" Content="&#xE103;"
+                                         Background="{x:Null}"
+                                         Click="ButtonClick"
+                                         ClickMode="Press" />
+
+                        <TextBlock Text="Pause" FontSize="16" VerticalAlignment="Center" Margin="40,0,0,0" />
+                    </StackPanel>
+
+                    <StackPanel Name="MyStackPanelResumeRecord" Orientation="Horizontal" Margin="0,5,0,0" ToolTipService.ToolTip="Resume">
+                        <Button Name="ResumeButton" 
+                                         FontFamily="Segoe MDL2 Assets" 
+                                         FontSize="35" Content="&#xEC13;" 
+                                         Background="{x:Null}"
+                                         Click="ButtonClick"
+                                         ClickMode="Press" />
+
+                        <TextBlock Text="Resume" FontSize="16" VerticalAlignment="Center" Margin="40,0,0,0" />
+                    </StackPanel>
+
+                    <StackPanel Name="MyStackPanelStopRecord" Orientation="Horizontal" Margin="0,5,0,0" ToolTipService.ToolTip="Stop and Save">
+                        <Button Name="StopButton" 
+                                         FontFamily="Segoe MDL2 Assets" 
+                                         FontSize="35" Content="&#xE73C;" 
+                                         Background="{x:Null}"
+                                         Click="ButtonClick"
+                                         ClickMode="Press" />
+
+                        <TextBlock Text="Stop and Save Video Recording" FontSize="16" VerticalAlignment="Center" Margin="40,0,0,0" />
+                    </StackPanel>
+
+                    <StackPanel Name="MyStackPanelRefresh" Orientation="Horizontal" Margin="0,5,0,0" ToolTipService.ToolTip="Record New Video or Refresh">
+                        <Button Name="ResetButton"
+                                         FontFamily="Segoe MDL2 Assets" 
+                                         FontSize="35" Content="&#xE72C;"
+                                         Click="ButtonClick"
+                                         Background="{x:Null}" />
+                        <TextBlock Name="TxtStatus" Text="Record New Video or Refresh" FontSize="16" VerticalAlignment="Center" Margin="40,0,0,0" TextWrapping="WrapWholeWords"/>
+
+                    </StackPanel>
+
+                    <StackPanel Name="MyStackPanelStatus" Orientation="Horizontal">
+                        <TextBlock 
+                            Name="Status" 
+                            Foreground="IndianRed"  
+                            Margin="0,0,0,0" 
+                            FontSize="15" 
+                            FontWeight="Bold"
+                            TextWrapping="Wrap"
+                            Width="90" >
+
+                        </TextBlock>
+
+                    </StackPanel>
+
+                    <StackPanel Name="MyStackPanelDuration" Orientation="Horizontal">
+                        <TextBlock 
+                            Name="Duration" 
+                            Text="{Binding}"
+                            TextWrapping="Wrap"
+                            FontSize="15"
+                            Foreground="IndianRed"
+                            FontWeight="Bold"
+                            FontStyle="Italic" 
+                            Width="90" >
+                        </TextBlock>
+
+                    </StackPanel>
+
+                </StackPanel>
+            </SplitView.Pane>
+
+            <SplitView.Content>
+                <Frame>
+                    <CaptureElement Name="ErCaptureElem" Height="Auto" Width="Auto" Margin="0,0,0,0"/>
+                </Frame>
+            </SplitView.Content>
+
+        </SplitView>
+
+
+    </Grid>
+
+</Page>
+
